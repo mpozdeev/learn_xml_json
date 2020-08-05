@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="run_schema2.xsd">
+    <category name="clothes">
+        <subcategory name="trousers"/>
+        <subcategory name="shorts"/>
+        <subcategory name="t-shirt"/>
+    </category>
+    <category name="shoes">
+        <subcategory name="street"/>
+        <subcategory name="rugged_terrain"/>
+
+    </category>
+</shop>

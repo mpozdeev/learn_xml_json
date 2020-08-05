@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="run_schema.xsd">
+    <category name="clothes">
+        <subcategory name="trousers">
+            <product>
+                <manufacturer>Производитель_1</manufacturer>
+                <model>BA001</model>
+                <dateOfManufacture>05-04-2020</dateOfManufacture>
+                <color>red</color>
+                <price>25.5</price>
+                <quantity>6</quantity>
+            </product>
+            <product>
+                <manufacturer>Производитель_2</manufacturer>
+                <model>BB003</model>
+                <dateOfManufacture>11-01-2020</dateOfManufacture>
+                <color>red</color>
+                <price>20.5</price>
+                <quantity>4</quantity>
+            </product>
+        </subcategory>
+
+        <subcategory name="shorts">
+            <product>
+                <manufacturer>Производитель_3</manufacturer>
+                <model>SC001</model>
+                <dateOfManufacture>21-06-2020</dateOfManufacture>
+                <color>red</color>
+                <price>14.5</price>
+                <quantity>17</quantity>
+            </product>
+            <product>
+                <manufacturer>Производитель_4</manufacturer>
+                <model>SD002</model>
+                <dateOfManufacture>01-01-2020</dateOfManufacture>
+                <color>red</color>
+                <price>13.5</price>
+                <quantity>3</quantity>
+            </product>
+        </subcategory>
+
+        <subcategory name="t-shirt">
+            <product>
+                <manufacturer>Производитель_1</manufacturer>
+                <model>FA001</model>
+                <dateOfManufacture>13-03-2020</dateOfManufacture>
+                <color>red</color>
+                <price>15.5</price>
+                <quantity>17</quantity>
+            </product>
+            <product>
+                <manufacturer>Производитель_1</manufacturer>
+                <model>FA001</model>
+                <dateOfManufacture>21-05-2020</dateOfManufacture>
+                <color>black</color>
+                <price>17.5</price>
+                <quantity>6</quantity>
+            </product>
+        </subcategory>
+        <subcategory name="jacket">
+            <product>
+                <manufacturer>Производитель_2</manufacturer>
+                <model>KB017</model>
+                <dateOfManufacture>01-01-2020</dateOfManufacture>
+                <color>red</color>
+                <price>35.5</price>
+                <quantity>2</quantity>
+            </product>
+            <product>
+                <manufacturer>Производитель_4</manufacturer>
+                <model>KD031</model>
+                <dateOfManufacture>01-01-2020</dateOfManufacture>
+                <color>red</color>
+                <price>55.5</price>
+                <quantity>3</quantity>
+            </product>
+        </subcategory>
+    </category>
+    <category name="shoes">
+        <subcategory name="street">
+            <product>
+                <manufacturer>Производитель_5</manufacturer>
+                <model>SE001</model>
+                <dateOfManufacture>10-07-2020</dateOfManufacture>
+                <color>white</color>
+                <price>25.5</price>
+                <quantity>8</quantity>
+            </product>
+            <product>
+                <manufacturer>Производитель_6</manufacturer>
+                <model>SF011</model>
+                <dateOfManufacture>07-07-2020</dateOfManufacture>
+                <color>green</color>
+                <price>17.5</price>
+                <quantity>1</quantity>
+            </product>
+        </subcategory>
+        <subcategory name="rugged_terrain">
+            <product>
+                <manufacturer>Производитель_5</manufacturer>
+                <model>AA001</model>
+                <dateOfManufacture>01-01-2020</dateOfManufacture>
+                <color>red</color>
+                <price>15.5</price>
+                <quantity>17</quantity>
+            </product>
+            <product>
+                <manufacturer>Производитель_3</manufacturer>
+                <model>AA001</model>
+                <dateOfManufacture>01-01-2020</dateOfManufacture>
+                <color>red</color>
+                <price>15.5</price>
+                <quantity>0</quantity>
+            </product>
+        </subcategory>
+        <subcategory name="prepared_surface">
+            <product>
+                <manufacturer>Производитель_2</manufacturer>
+                <model>DB017</model>
+                <dateOfManufacture>01-01-2020</dateOfManufacture>
+                <color>blue</color>
+                <price>47.5</price>
+                <quantity>1</quantity>
+            </product>
+            <product>
+                <manufacturer>Производитель_4</manufacturer>
+                <model>DD201</model>
+                <dateOfManufacture>01-01-2020</dateOfManufacture>
+                <color>red</color>
+                <price>40.5</price>
+                <quantity>2</quantity>
+            </product>
+        </subcategory>
+    </category>
+</shop>
