@@ -1,0 +1,161 @@
+{
+  "categoryList": [
+    {
+      "name": "clothes",
+      "subcategoryList": [
+        {
+          "name": "trousers",
+          "productList": [
+            {
+              "manufacturer": "Производитель_1",
+              "model": "BA001",
+              "dateOfManufacture": "05-04-2020",
+              "color": "red",
+              "price": 25.5,
+              "quantity": 6
+            },
+            {
+              "manufacturer": "Производитель_2",
+              "model": "BB003",
+              "dateOfManufacture": "11-01-2020",
+              "color": "red",
+              "price": 20.5,
+              "quantity": 4
+            }
+          ]
+        },
+        {
+          "name": "shorts",
+          "productList": [
+            {
+              "manufacturer": "Производитель_3",
+              "model": "SC001",
+              "dateOfManufacture": "21-06-2020",
+              "color": "red",
+              "price": 14.5,
+              "quantity": 17
+            },
+            {
+              "manufacturer": "Производитель_4",
+              "model": "SD002",
+              "dateOfManufacture": "01-01-2020",
+              "color": "red",
+              "price": 13.5,
+              "quantity": 3
+            }
+          ]
+        },
+        {
+          "name": "t-shirt",
+          "productList": [
+            {
+              "manufacturer": "Производитель_1",
+              "model": "FA001",
+              "dateOfManufacture": "13-03-2020",
+              "color": "red",
+              "price": 15.5,
+              "quantity": 17
+            },
+            {
+              "manufacturer": "Производитель_1",
+              "model": "FA001",
+              "dateOfManufacture": "21-05-2020",
+              "color": "black",
+              "price": 17.5,
+              "quantity": 6
+            }
+          ]
+        },
+        {
+          "name": "jacket",
+          "productList": [
+            {
+              "manufacturer": "Производитель_2",
+              "model": "KB017",
+              "dateOfManufacture": "01-01-2020",
+              "color": "red",
+              "price": 35.5,
+              "quantity": 2
+            },
+            {
+              "manufacturer": "Производитель_4",
+              "model": "KD031",
+              "dateOfManufacture": "01-01-2020",
+              "color": "red",
+              "price": 55.5,
+              "quantity": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "shoes",
+      "subcategoryList": [
+        {
+          "name": "street",
+          "productList": [
+            {
+              "manufacturer": "Производитель_5",
+              "model": "SE001",
+              "dateOfManufacture": "10-07-2020",
+              "color": "white",
+              "price": 25.5,
+              "quantity": 8
+            },
+            {
+              "manufacturer": "Производитель_6",
+              "model": "SF011",
+              "dateOfManufacture": "07-07-2020",
+              "color": "green",
+              "price": 17.5,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "name": "rugged_terrain",
+          "productList": [
+            {
+              "manufacturer": "Производитель_5",
+              "model": "AA001",
+              "dateOfManufacture": "01-01-2020",
+              "color": "red",
+              "price": 15.5,
+              "quantity": 17
+            },
+            {
+              "manufacturer": "Производитель_3",
+              "model": "AA001",
+              "dateOfManufacture": "01-01-2020",
+              "color": "red",
+              "price": 15.5,
+              "quantity": 0
+            }
+          ]
+        },
+        {
+          "name": "prepared_surface",
+          "productList": [
+            {
+              "manufacturer": "Производитель_2",
+              "model": "DB017",
+              "dateOfManufacture": "01-01-2020",
+              "color": "blue",
+              "price": 47.5,
+              "quantity": 1
+            },
+            {
+              "manufacturer": "Производитель_4",
+              "model": "DD201",
+              "dateOfManufacture": "01-01-2020",
+              "color": "red",
+              "price": 40.5,
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,23 +1,23 @@
 package ru.pozdeev.learn;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import javax.xml.bind.*;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 import static javax.xml.stream.XMLStreamConstants.END_ELEMENT;
 import static javax.xml.stream.XMLStreamConstants.START_ELEMENT;
 
-public class StAX_JAXB_Parser {
+public class MyParser {
 
-    public static Shop parseXMLfile(String xmlFilePath) throws JAXBException {
+    //Use StAX, JAXB
+    public static Shop getObjectFromXml(String xmlFilePath) throws JAXBException {
         Shop shop = null;
 
         List<Category> categoryList = new ArrayList<>();
@@ -37,7 +37,6 @@ public class StAX_JAXB_Parser {
         Unmarshaller unmarshaller = jc.createUnmarshaller();
 
         try {
-//            XMLEventReader reader = inputFactory.createXMLEventReader(new FileInputStream(xmlFileName));
             XMLStreamReader reader = inputFactory.createXMLStreamReader(new FileInputStream(xmlFilePath));
             while (reader.hasNext()) {
                 int event = reader.next();
@@ -70,9 +69,6 @@ public class StAX_JAXB_Parser {
                                 product = boolElement.getValue();
                                 subcategory.addProduct(product);
 
-//                                if (reader.getEventType() == XMLStreamConstants.CHARACTERS) {
-//                                    reader.next();
-//                                }
                             }
                             break;
                     }
@@ -105,4 +101,62 @@ public class StAX_JAXB_Parser {
 
         return shop;
     }
+
+    public static String getXmlFromObj(Shop shop) {
+        StringWriter sw = new StringWriter();
+        try {
+            JAXBContext context = JAXBContext.newInstance(Shop.class);
+            Marshaller marshaller = context.createMarshaller();
+            // устанавливаем флаг для читабельного вывода XML в JAXB
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+//            marshaller.marshal(shop, new File(filePath)); // маршаллинг объекта в файл
+            marshaller.marshal(shop, sw);
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+        return sw.toString();
+    }
+
+    public static String getXmlFromJson(String jsonFilePath) {
+        return getXmlFromObj(MyParser.getObjectFromJson(jsonFilePath));
+    }
+
+    //Use GSON
+    public static Shop getObjectFromJson(String jsonFilePath) {
+        Reader reader = null;
+        try {
+            reader = new BufferedReader(new FileReader(jsonFilePath));
+        } catch (FileNotFoundException e) {
+            System.err.println("File not found: " + e);
+        }
+        Gson gson = new Gson();
+
+        Shop shop = gson.fromJson(reader, Shop.class);
+        return shop;
+    }
+
+    public static <T> String getJsonFromObj(T t) {
+        return new GsonBuilder()
+                .setPrettyPrinting()
+                .create()
+                .toJson(t);
+    }
+
+    public static String getJsonFromXml(String xmlFilePath) throws JAXBException {
+        return getJsonFromObj(MyParser.getObjectFromXml(xmlFilePath));
+    }
+
+
+    //Save result to file writeToFile(Object obj, String typeFile (XML or JSON), String newFileName)
+    /*public static void writeToFile(String newFileName) {
+        String fullNewFileName = "src\\main\\resources\\" + newFileName;
+        try (Writer writer = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream(jsonFilePath), "utf-8"))) {
+            writer.write(MyParser.getJsonFromXml(xmlFilePath));
+        } catch (IOException ex) {
+            System.err.println("Ошибка при работе с файлом для вывода: " + ex);
+        }
+    }*/
+
+
 }
