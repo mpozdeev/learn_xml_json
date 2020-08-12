@@ -6,6 +6,7 @@ public class App {
     public static void main(String[] args) throws JAXBException {
         String xmlFilePath = "src\\main\\resources\\product.xml";
         String jsonFilePath = "src\\main\\resources\\new_product.json";
+        String schemaName = "src\\main\\resources\\run_schema.xsd";
 
         // XML -> Obj
 //        Shop shopFromXml = MyParser.getObjectFromXml(xmlFilePath);
@@ -28,6 +29,12 @@ public class App {
 
         //JSON -> XML
 //        System.out.println(MyParser.getXmlFromJson(jsonFilePath));
+
+        if (ValidatorXml.isValid(xmlFilePath, schemaName)) {
+            System.out.println("valid");
+        } else{
+            System.out.println("not valid - see staectrase");
+        }
 
     }
 }
